@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var dateHolder: DateHolder
+    
     var body: some View {
-        Text("Hello, world!")
+        DateScrollerView()
+            .environmentObject(DateHolder)
             .padding()
     }
 }
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
